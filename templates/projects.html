@@ -1,0 +1,16 @@
+{{define "content"}}
+<h1>Projects</h1>
+<ul class="projects">
+  {{range .Projects}}
+  <li class="project">
+    <h2>{{.Name}}</h2>
+    <p>{{.Description}}</p>
+    <a href="{{.URL}}">View on GitHub</a>
+  </li>
+  {{end}}
+</ul>
+
+<p class="more-work">
+  There's more on my profile: <a href="https://github.com/ejembiedwin36-oss">github.com/ejembiedwin36-oss</a>
+</p>
+{{end}}

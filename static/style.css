@@ -1,0 +1,99 @@
+:root {
+  --paper: #eef5f6;
+  --ink: #0f2a33;
+  --muted: #4a6670;
+  --go-blue: #00799c;
+  --go-sky: #bfe7f1;
+  --go-pink: #ce3262;
+  --max: 46rem;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  line-height: 1.6;
+}
+
+a { color: var(--go-blue); }
+a:hover { color: var(--go-pink); }
+a:focus-visible, .button:focus-visible {
+  outline: 3px solid var(--go-pink);
+  outline-offset: 3px;
+}
+
+.site-header, main, .site-footer {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 1.25rem 1.25rem;
+}
+
+.site-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 0.75rem;
+  border-bottom: 2px solid var(--go-sky);
+}
+
+.brand { font-weight: 700; color: var(--ink); text-decoration: none; }
+.site-header nav a { margin-left: 1.25rem; text-decoration: none; }
+.site-header nav a:hover { text-decoration: underline; }
+
+h1 { font-size: clamp(1.7rem, 4vw, 2.4rem); line-height: 1.2; margin: 1rem 0; }
+
+.hero { padding-top: 2rem; }
+
+.banner {
+  margin: 0 0 1.5rem;
+  padding: 1.25rem;
+  overflow-x: auto;
+  background: var(--ink);
+  color: var(--go-sky);
+  font: clamp(0.7rem, 2.6vw, 1.15rem) / 1.2 ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  border-radius: 6px;
+}
+
+.lead { font-size: 1.15rem; color: var(--muted); max-width: 38rem; }
+
+.button {
+  display: inline-block;
+  padding: 0.7rem 1.2rem;
+  background: var(--go-blue);
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 6px;
+}
+.button:hover { background: var(--go-pink); color: #fff; }
+
+.prose { max-width: 38rem; }
+
+.projects { list-style: none; margin: 0; padding: 0; }
+.project { padding: 1.25rem 0; border-top: 2px solid var(--go-sky); }
+.project h2 { margin: 0 0 0.25rem; font-size: 1.3rem; }
+.project p { margin: 0 0 0.5rem; max-width: 38rem; }
+
+.site-footer { color: var(--muted); font-size: 0.9rem; }
+
+
+.intro {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  align-items: flex-start;
+}
+
+.portrait {
+  width: 10rem;
+  height: 12.5rem;
+  object-fit: cover;
+  border: 3px solid var(--go-sky);
+  border-radius: 6px;
+}
+
+.intro > div { flex: 1 1 18rem; }

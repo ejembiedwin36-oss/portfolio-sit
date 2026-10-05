@@ -1,0 +1,27 @@
+{{define "layout"}}<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{.Title}} | Ejembi Edwin</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="/">Ejembi Edwin</a>
+    <nav>
+      <a href="/about">About</a>
+      <a href="/projects">Projects</a>
+      <a href="/contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    {{template "content" .}}
+  </main>
+
+  <footer class="site-footer">
+    <p>Built with Go and the standard library.</p>
+  </footer>
+</body>
+</html>{{end}}
